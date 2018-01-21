@@ -27,8 +27,6 @@ setup(name='jakopicevca',
       packages=['jakopicevca'],
       platforms='Linux',
       install_requires=[
-          'sense-hat',
-          'picamera',
           'ephem'
       ],
       python_requires='>=3',

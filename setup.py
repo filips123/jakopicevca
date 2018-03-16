@@ -1,8 +1,12 @@
 from setuptools import setup
 
 def readme():
-    with open("README.rst") as f:
-        return f.read()
+    try:
+        import pypandoc
+        return pypandoc.convert_file('README.md', 'rst')
+    except (ImportError, IOError, OSError):
+        with open("README.md") as f:
+            return f.read()
 
 setup(
     name = "jakopicevca",
@@ -20,6 +24,10 @@ setup(
     install_requires = [
         "ephem"
     ],
+    
+    extras_require = {
+        "pandoc": ["pypandoc"]
+    },
     
     author = "Team Jakopičevca",
     author_email = "filip.stamcar@hotmail.com",

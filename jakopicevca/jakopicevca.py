@@ -178,19 +178,3 @@ class Jakopicevca:
         
         # Display colour to the SenseHAT display
         self.sense.clear(red, green, blue)
-
-###############################################
-#kako preveri če je blizu lokacije:
-#absolutna(trenutnaLat-zapisanaLat)<=tolerancaLat & absolutna(trenutnaLongzapisanaLong)<=tolerancaLong
-#če je mililo več kot delay sekund
-#print((datetime.utcnow() - datetime(1, 1, 1)).total_seconds() >= default["delay"])
-#podatki/log:
-#print("time: %s - location: %s - longitude: %f - latitude: %f" % (timestamp, locationName, math.degrees(iss.sublong), math.degrees(iss.sublat)))
-
-#tle = TLE podatki, locations = lokacije za slikanje, default = privzeti podatki, dataFile = CSV datoteka z podatke, logger = logger objekt (ne datoteka!) za loge, dataDir = mapa s podatki
-
-# Pomembno: Uporabi sched za izvajanje na x sekund https://stackoverflow.com/questions/474528/what-is-the-best-way-to-repeatedly-execute-a-function-every-x-seconds-in-python
-# Pomembno: Če so ISS TLE podatki zastareli, bo program sprožil izjemo!
-# Glej tudi https://beebotte.com/tutorials/iss_realtime_position
-# Pomembno: Popravi JSON, ker ne sprejema komentarjev!
-# Pomembno: PyPI ne sprejema Markdowna, zato je potrebno README pretvoriti v ReStructedText

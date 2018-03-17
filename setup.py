@@ -2,9 +2,15 @@ from setuptools import setup
 
 def readme():
     try:
+        from pypandoc.pandoc_download import download_pandoc
+        download_pandoc()
+        print()
+        
         import pypandoc
         return pypandoc.convert_file('README.md', 'rst')
-    except (ImportError, IOError, OSError):
+    except (ImportError, IOError, OSError) as e:
+        print(e)
+        print()
         with open("README.md") as f:
             return f.read()
 
@@ -32,7 +38,7 @@ setup(
     author = "Team Jakopičevca",
     author_email = "filip.stamcar@hotmail.com",
     url = "https://github.com/filips123/jakopicevca/",
-    keywords = "Raspberry Pi, Astro Pi, Mission Space Lab, OŠ Riharda Jakopiča, ESA",
+    keywords = "RaspberryPi AstroPi MissionSpaceLab OŠRJ ESA",
     platforms = "Linux",
     
     classifiers = [

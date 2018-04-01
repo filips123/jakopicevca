@@ -57,7 +57,7 @@ Create `config.json` file with the following content (fill the missing informati
       "### Location Name ###": {
       "latitude1": most-north-point,
       "latitude2": most-south-point,
-      "longitude1": most-west-pointt,
+      "longitude1": most-west-point,
       "longitude2": most-east-point,
       "delay": photographing-delay
       }

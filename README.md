@@ -1,5 +1,6 @@
 ﻿Astro Pi 2017/18 - Team Jakopičevca
 ===================================
+
 Program for Astro Pi 2017/18 - Mission Space Lab - Team Jakopičevca
 
 ## Description
@@ -32,16 +33,15 @@ It is recommended to install program in Python VENV. Python VENV must be created
 
 Installation from PyPI:
 ```bash
-sudo pip3 install jakopicevca
+sudo pip3 install jakopicevca2017
 ```
 
 Installation from GitHub repository:
 ```bash
-git clone https://github.com/filips123/jakopicevca/
+git clone https://github.com/filips123/jakopicevca/ --branch 2017 --single-branch
 cd jakopicevca
 sudo python3 setup.py install
 ```
-
 
 ### Running
 Create `config.json` file with the following content (fill the missing informations):
@@ -72,7 +72,7 @@ Create `config.json` file with the following content (fill the missing informati
 
 Save the file and start the program with:
 ```bash
-python3 -m jakopicevca path/to/config.json path/to/file.csv path/to/image/folder path/to/file.log
+python3 -m jakopicevca2017 path/to/config.json path/to/file.csv path/to/image/folder path/to/file.log
 ```
 
 CSV and log files, and image folder will be created automatically.

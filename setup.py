@@ -8,6 +8,7 @@ def readme():
         
         import pypandoc
         return pypandoc.convert_file('README.md', 'rst')
+    
     except (ImportError, IOError, OSError) as e:
         print(e)
         print()
@@ -15,16 +16,16 @@ def readme():
             return f.read()
 
 setup(
-    name = "jakopicevca",
-    version = "1.0",
+    name = "jakopicevca2017",
+    version = "1.1",
     description = "Program for Astro Pi 2017/18 - Mission Space Lab - Team Jakopičevca",
     long_description = readme(),
     license = "GPLv3+",
     
-    packages = ["jakopicevca"],
+    packages = ["jakopicevca2017"],
     
     entry_points = {
-        "console_scripts": ["jakopicevca=jakopicevca.__main__"],
+        "console_scripts": ["jakopicevca2017=jakopicevca2017.__main__"],
     },
     
     install_requires = [
@@ -37,7 +38,7 @@ setup(
     
     author = "Team Jakopičevca",
     author_email = "filip.stamcar@hotmail.com",
-    url = "https://github.com/filips123/jakopicevca/",
+    url = "https://github.com/filips123/jakopicevca/tree/2017/",
     keywords = "RaspberryPi AstroPi MissionSpaceLab OŠRJ ESA",
     platforms = "Linux",
     
